@@ -50,4 +50,4 @@ Run this command in your project terminal.
 
 -   `npm run watch`
 
--   `Installation completed. You are good to go with your project.`.
+-   `Installation completed. You are good to go with your project.`
