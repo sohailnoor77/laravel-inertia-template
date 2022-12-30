@@ -1,0 +1,21 @@
+// fonts cdn
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+// Bootstrap
+@import "~bootstrap/scss/bootstrap";
+body{
+    height: 100%;
+    background: #43425d;
+}
+// style guides  / defaults
+@import "typography";
+@import "variables";
+@import "login";
+
+

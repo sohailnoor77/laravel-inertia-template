@@ -1,0 +1,210 @@
+$field-container-padding: 10px;
+$label-padding: $field-container-padding !default;
+@mixin width-center {
+    width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.login-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .login-card {
+        background: linear-gradient(to right, rgba(67, 66, 93, 0.88) 0%, #43425d 100%);
+        height: 800px;
+        width: 1000px;
+        margin-top: 100px;
+        padding: 20px;
+        border-radius: 50px;
+        box-shadow: 0 6px 21px rgba(0, 0, 0, 0.3);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+overflow: hidden;
+        .login-card-header {
+            @include width-center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            margin-bottom: 30px;
+            color: white;
+
+            .login-card-header-title {
+                font-size: 30px;
+                font-weight: bold;
+            }
+        }
+
+        .login-card-body {
+            @include width-center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+}
+
+.field-container {
+    position: relative;
+    border-bottom: 1px solid #bcbaba;
+    height: 50px;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.field-placeholder {
+    position: absolute;
+    top: 50%;
+    transform: translate(#{$label-padding}, -50%);
+    pointer-events: none;
+    transition: all .14s ease-in-out;
+    font-size: 18px;
+    color: #adadad;
+
+}
+
+input.field-input {
+    border: none;
+    padding: $label-padding;
+    font-size: 16px;
+    display: block;
+    box-sizing: border-box;
+    width: 100%;
+    bottom: 0;
+    height: 100%;
+    border-radius: 5px;
+    background: #43425d;
+    color: white;
+
+    &:focus {
+        outline: none;
+    }
+
+    &.c-fix,
+    &:focus,
+    &:not(:placeholder-shown),
+    {
+        border-color: transparent;
+
+        ~ label {
+            color: white;
+            font-size: 11px;
+            top: calc(30% - .8rem);
+            transform: translate(#{$label-padding}, 0%);
+        }
+    }
+
+    &::-webkit-input-placeholder {
+        color: transparent;
+    }
+
+    &::-moz-placeholder {
+        color: transparent;
+    }
+
+    &:-ms-input-placeholder {
+        color: transparent;
+    }
+
+}
+
+.login-card-footer {
+    @include width-center;
+    padding: 20px 5px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-direction: column;
+
+    .forgot {
+        margin-top: 15px;
+        text-decoration: none;
+        color: white;
+        text-align: center;
+        font-size: 14px;
+    }
+
+}
+
+.custom-button {
+    width: 100%;
+    height: 40px;
+    background: linear-gradient(to bottom, #4eb5e5 0%, #389ed5 100%);
+    border: none;
+    border-radius: 5px;
+    position: relative;
+    border-bottom: 4px solid #2b8bc6;
+    color: #fbfbfb;
+    font-weight: 600;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, .4);
+    font-size: 15px;
+    text-align: center;
+    text-indent: 5px;
+    box-shadow: 0 3px 0 0 rgba(0, 0, 0, .2);
+    cursor: pointer;
+
+}
+
+.custom-button:active {
+    box-shadow: 0 2px 0 0 rgba(0, 0, 0, .2);
+    top: 1px;
+}
+
+.custom-button:after {
+    content: "";
+    width: 0;
+    height: 0;
+    display: block;
+    border-top: 20px solid #187dbc;
+    border-bottom: 20px solid #187dbc;
+    border-left: 16px solid transparent;
+    border-right: 20px solid #187dbc;
+    position: absolute;
+    opacity: 0.6;
+    right: 0;
+    top: 0;
+    border-radius: 0 5px 5px 0;
+}
+
+
+.feather-container {
+    transform: rotate(90deg);
+    width: 300px;
+    height: 300px;
+    position: relative;
+    left: -359px;
+    top: -167px;
+    clip-path: inset(-32px -131px 10px 90px);
+    z-index: 0;
+}
+
+.box {
+    width: 300px;
+    height: 300px;
+    border-top-left-radius: 100%;
+    border-bottom-right-radius: 100%;
+    background-color: #3f4d8e;
+    position: absolute;
+    top: 0;
+}
+
+.box2 {
+    width: 300px;
+    height: 300px;
+    border-top-left-radius: 100%;
+    border-bottom-right-radius: 100%;
+    background-color: #397c90;
+    position: absolute;
+    top: 77px;
+    transform: rotate(25deg);
+    left: 48px;
+    opacity: 0.7;
+}
