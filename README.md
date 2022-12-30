@@ -21,3 +21,33 @@
 -   Sass (SCSS) 1.49.x
 -   ziggy (Laravel named routes on frontend)
 -   antd (Ant Design Components)
+
+## Installation
+
+Step 1:
+Clone this repo in your Laragon wwww folder or any other web server you are using in your local system.
+
+Step 2:
+Copy the .env.example file and rename it to .env. Set the database name.
+
+Step 3:
+Run this command in your project terminal.
+
+-   `composer install`.
+
+Step 4:
+Run this command in your project terminal.
+
+-   `php artisan key:generate`.
+
+Step 5:
+Run this command in your project terminal.
+
+-   `npm install`.
+
+Step 6:
+Run this command in your project terminal.
+
+-   `npm run watch`
+
+-   `You are good to go with your project.`.
